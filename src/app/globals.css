@@ -1,34 +1,47 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #FFF8F0;
+  --color-cream: #FFF8F1;
   --color-bakery-brown: #6B4226;
-  --color-bakery-brown-hover: #54331C;
+  --color-bakery-brown-hover: #502C12;
   --color-warm-peach: #E07856;
-  --color-warm-peach-hover: #D26442;
-  --color-soft-pink: #FBE3D9;
-  --color-dark-cocoa: #2E211A;
+  --color-warm-peach-hover: #9B4426;
+  --color-soft-pink: #FFDBD0;
+  --color-dark-cocoa: #1E1B17;
   --font-poppins: var(--font-poppins), 'Poppins', sans-serif;
 }
 
 :root {
-  --background: #FFF8F0;
-  --foreground: #2E211A;
+  --background: #fff8f1;
+  --foreground: #1e1b17;
 }
 
-/* Explicit color utility classes guaranteeing brand palette adherence */
-.bg-cream { background-color: #FFF8F0 !important; }
-.bg-bakery-brown { background-color: #6B4226 !important; }
-.bg-bakery-brown:hover { background-color: #54331C !important; }
-.text-bakery-brown { color: #6B4226 !important; }
-.bg-warm-peach { background-color: #E07856 !important; }
-.bg-warm-peach:hover { background-color: #D26442 !important; }
-.text-warm-peach { color: #E07856 !important; }
-.bg-soft-pink { background-color: #FBE3D9 !important; }
-.text-dark-cocoa { color: #2E211A !important; }
-.border-warm-peach { border-color: #E07856 !important; }
-.border-soft-pink { border-color: #FBE3D9 !important; }
-.border-bakery-brown { border-color: #6B4226 !important; }
+/* Design Tokens & Utilities matching Sweet Crust Design System */
+.bg-background { background-color: #fff8f1 !important; }
+.bg-surface { background-color: #fff8f1 !important; }
+.bg-surface-container-lowest { background-color: #ffffff !important; }
+.bg-surface-container-low { background-color: #f9f3eb !important; }
+.bg-surface-container { background-color: #f4ede5 !important; }
+.bg-surface-container-high { background-color: #eee7df !important; }
+.bg-primary { background-color: #502c12 !important; }
+.bg-primary-container { background-color: #6b4226 !important; }
+.bg-secondary { background-color: #9b4426 !important; }
+.bg-secondary-container { background-color: #fe906c !important; }
+.bg-secondary-fixed { background-color: #ffdbd0 !important; }
+
+.text-primary { color: #502c12 !important; }
+.text-primary-container { color: #6b4226 !important; }
+.text-on-primary { color: #ffffff !important; }
+.text-on-primary-container { color: #e9b08c !important; }
+.text-secondary { color: #9b4426 !important; }
+.text-on-secondary-fixed-variant { color: #7c2d11 !important; }
+.text-on-surface { color: #1e1b17 !important; }
+.text-on-surface-variant { color: #51443d !important; }
+.text-secondary-fixed { color: #ffdbd0 !important; }
+
+.border-outline-variant { border-color: #d5c3b9 !important; }
+.border-secondary-fixed { border-color: #ffdbd0 !important; }
+
 .relative { position: relative !important; }
 .absolute { position: absolute !important; }
 .fixed { position: fixed !important; }
@@ -42,8 +55,8 @@ html {
 }
 
 body {
-  background-color: #FFF8F0;
-  color: #2E211A;
+  background-color: #fff8f1;
+  color: #1e1b17;
   font-family: var(--font-poppins), 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -52,11 +65,16 @@ body {
   flex-direction: column;
 }
 
-/* Accessible focus ring using bakery brown & warm peach */
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Accessible focus ring using primary & secondary */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #E07856;
+  outline: 2px solid #9b4426;
   outline-offset: 2px;
 }
