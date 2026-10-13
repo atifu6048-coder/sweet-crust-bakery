@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FFF8F0;
+  --color-bakery-brown: #6B4226;
+  --color-bakery-brown-hover: #54331C;
+  --color-warm-peach: #E07856;
+  --color-warm-peach-hover: #D26442;
+  --color-soft-pink: #FBE3D9;
+  --color-dark-cocoa: #2E211A;
+  --font-poppins: var(--font-poppins), 'Poppins', sans-serif;
+}
+
+:root {
+  --background: #FFF8F0;
+  --foreground: #2E211A;
+}
+
+/* Explicit color utility classes guaranteeing brand palette adherence */
+.bg-cream { background-color: #FFF8F0 !important; }
+.bg-bakery-brown { background-color: #6B4226 !important; }
+.bg-bakery-brown:hover { background-color: #54331C !important; }
+.text-bakery-brown { color: #6B4226 !important; }
+.bg-warm-peach { background-color: #E07856 !important; }
+.bg-warm-peach:hover { background-color: #D26442 !important; }
+.text-warm-peach { color: #E07856 !important; }
+.bg-soft-pink { background-color: #FBE3D9 !important; }
+.text-dark-cocoa { color: #2E211A !important; }
+.border-warm-peach { border-color: #E07856 !important; }
+.border-soft-pink { border-color: #FBE3D9 !important; }
+.border-bakery-brown { border-color: #6B4226 !important; }
+.relative { position: relative !important; }
+.absolute { position: absolute !important; }
+.fixed { position: fixed !important; }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFF8F0;
+  color: #2E211A;
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Accessible focus ring using bakery brown & warm peach */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #E07856;
+  outline-offset: 2px;
+}
